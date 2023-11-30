@@ -1,5 +1,5 @@
-from udp import *
-from time import *
+import udp
+import time
 
 def onUDPReceive(ip, port, data):
 	print("Reply from " + ip)
@@ -8,7 +8,7 @@ socket = UDPSocket()
 socket.onReceive(onUDPReceive)
 socket.begin(1235)
 
-network = "10.218.45."
+network = "192.168.20."
 	
 for host in range(255):
 
